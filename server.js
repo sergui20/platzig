@@ -2,6 +2,8 @@ var express = require('express');
 var multer  = require('multer');
 var ext = require('file-extension');
 
+process.env.PORT = process.env.PORT || 3000;
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './uploads')
@@ -115,7 +117,7 @@ app.get('/:username/:id', function (req, res) {
 	res.render('index', { title: `Platzigram - ${req.params.username}` })
 })
 
-app.listen(3000, function (err){
+app.listen(process.env.PORT, function (err){
 	if (err) return console.log('Hubo un error'), process.exit(1);
 
 	console.log('Platzigram escuchando en el puerto 3000');
