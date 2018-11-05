@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Platzigram</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="public/platzigram.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+</head>
+<body>
+	<nav class="header">
+		<div class="nav-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 m6 offset-m1">
+						<a href="/" class="brand-logo platzigram">Platzigram</a>
+					</div>
+					<div class="col s2 m6 push-s10 push-m10">
+						<a href="#" class="dropdown-trigger1 btn btn-large btn-flat salir" data-target="dropdown1">
+							User
+						</a>
+						<ul id="dropdown1" class="dropdown-content">
+							<li><a href="#">Salir</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section id="main-container">
+		<div class="container">
+			<div class="row">
+				<div class="col s10 push-s1">
+					<div class="row">
+						<div class="col m5 hide-on-small-only">
+							<img class="iphoneimg" src="public/iphone.png">
+						</div>
+						<div class="col s12 m7">
+							<div class="row">
+								<div class="signup-box">
+									<h1 class="platzigram">Platzigram</h1>
+									<form class="signup-form">
+										<h2>Registrate para ver fotos de tus amigos estudiando en Platzi</h2>
+										<div class="section">
+											<a class="btn btn-fb hide-on-small-only">Iniciar sesion con Facebook</a>
+											<a class="btn btn-fb hide-on-med-and-up">Iniciar sesion</a>
+										</div>
+										<div class="divider"></div>
+										<div class="section">
+											<input type="email" name="email" placeholder="Correo electronico"></input>
+											<input type="text" name="name" placeholder="Nombre completo"></input>
+											<input type="text" name="username" placeholder="Nombre de usuario"></input>
+											<input type="password" name="password" placeholder="Contrasena"></input>
+											<button class="btn waves-effect waves-light btn-signup" type="submit">Registrate</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="login-box">
+									¿Tienes una cuenta? <a href="/signin">Entrar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 l3 center-align" style="position: relative;">
+					 <a class='dropdown-trigger2 btn' href='#' data-target='dropdown2'>Idiomas</a>
+	 				<ul id='dropdown2' class='dropdown-content'>
+  	 					<li><a href="#!">Espanol</a></li>
+    					<li><a href="#!">Ingles</a></li>
+  					</ul>
+				</div>
+				<div class="col s12 l3 push-l6 center-align">
+					© 2018 Platzigram
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var d1 = document.querySelectorAll('.dropdown-trigger1');
+			var d2 = document.querySelectorAll('.dropdown-trigger2');
+			var instance1 = M.Dropdown.init(d1, {
+				coverTrigger:false,
+			});
+			var instance2 = M.Dropdown.init(d2)
+ 		 });
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
